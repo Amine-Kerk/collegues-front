@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Amine-Kerk/collegues-front.svg?branch=master)](https://travis-ci.org/Amine-Kerk/collegues-front)
+
+
 # ColleguesFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
