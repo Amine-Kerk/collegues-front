@@ -14,8 +14,8 @@
     </form>
 </div>
 <br/>
-<div *ngIf="rechercher == true">
+<div *ngIf="rechercher">
     <ul>
-        <li *ngFor="liste">{{obj.matricule}}</li>
+        <li *ngFor="let obj of liste">{{obj.matricule}}</li>
     </ul>
 </div>
