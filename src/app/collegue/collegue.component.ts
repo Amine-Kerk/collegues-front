@@ -7,6 +7,9 @@ import { Collegue } from '../models/Collegue';
   styleUrls: ['./collegue.component.css']
 })
 export class CollegueComponent implements OnInit {
+
+  modifier:boolean = false;
+
 @Input() col : Collegue;
   
   
@@ -15,6 +18,7 @@ export class CollegueComponent implements OnInit {
   }
 
   modifierCollegue() {
+    this.modifier = true;
     console.log("Modification du collègue");
   }
 
@@ -22,7 +26,9 @@ export class CollegueComponent implements OnInit {
     console.log("Création de collègue");
   }
 
-
+  validerModif() {
+    this.modifier = false;
+  }
 
 
 }
