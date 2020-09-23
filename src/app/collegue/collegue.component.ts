@@ -9,10 +9,20 @@ import { Collegue } from '../models/Collegue';
 export class CollegueComponent implements OnInit {
 @Input() col : Collegue;
   
-  constructor() { }
+  
 
-  ngOnInit(): void {
-   
+  ngOnInit() {
   }
+
+  modifierCollegue() {
+    console.log("Modification du collègue");
+  }
+
+  creerCollegue() {
+    console.log("Création de collègue");
+  }
+
+
+
 
 }
