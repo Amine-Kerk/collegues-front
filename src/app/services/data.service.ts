@@ -1,7 +1,12 @@
-import { Injectable } from '@angular/core';
-import  {matriculesMock} from '../mock/matricules.mock'
+import { environment } from './../../environments/environment';
 import {collegueMock} from '../mock/collegues.mock'
+import  {matriculesMock} from '../mock/matricules.mock'
 import {Collegue} from '../models/Collegue';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+
 
 
 @Injectable({
@@ -9,13 +14,12 @@ import {Collegue} from '../models/Collegue';
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  rechercherParNom(nom: string): string[] {
-    // TODO retourner une liste de matricules fictifs à partir du fichier
-  //`src/app/mock/matricules.mock.ts`.
-  return matriculesMock
-    }
+  rechercherParNom(nom: string): Observable<string[]> {
+    return this.http.get<string[]>(`${environment.backendUrl}/collegues?nom=${nom}`);
+  }
+
     recupererCollegueCourant(): Collegue {
     // TODO retourner le collègue fictif à partir du fichier
  // `src/app/mock/collegues.mock.ts`.

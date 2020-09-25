@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  backendUrl: 'https://amine-collegue-app.herokuapp.com/collegues'
 };

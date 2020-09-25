@@ -1,21 +1,17 @@
-<div class="container-fluide">
-    <form>
-        <div class="row align-items-center">
-            <div class="col-2 ml-4">
-                <label for="rechercheParNom">Recherche par nom</label>
-            </div>
-            <div class="col-4">
-                <input type="text" class="form-control" id="rechercheParNom" #saisie placeholder="Rechercher">
-            </div>
-            <div class="col-4">
-                <button type="button" class="btn btn-dark" (click)="rechercherParNom(saisie.value)">Rechercher</button>
-            </div>
-        </div>
-    </form>
+<div class="row">
+  <div class="col-4">Recherche par nom : </div>
+  <input class="col-3 form-control" type="text" #saisieNom>
+  <button type="button" class="col-3 btn btn-info offset-1" (click)="rechercherCol(saisieNom.value)">Rechercher</button>
 </div>
-<br/>
-<div *ngIf="rechercher">
-    <ul>
-        <li *ngFor="let matricule of listeMatricules">{{matricule}}</li>
-    </ul>
+<div *ngIf="listeMatricules" class="row">
+  <ul>
+    <li *ngFor="let mat of listeMatricules">{{mat}}</li>
+  </ul>
+</div>
+
+<div *ngIf="matriculeNonTrouve" class="alert alert-warning" role="alert">
+  Le nom ne correspond à aucun collègue !
+</div>
+<div *ngIf="erreurTechnique" class="alert alert-danger" role="alert">
+  Oopss !!!!!
 </div>
