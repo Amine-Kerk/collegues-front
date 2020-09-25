@@ -17,7 +17,7 @@ export class DataService {
   constructor(private http: HttpClient) { }
 
   rechercherParNom(nom: string): Observable<string[]> {
-    return this.http.get<string[]>(`${environment.backendUrl}/collegues?nom=${nom}`);
+    return this.http.get<string[]>(`${environment.backendUrl}?nom=${nom}`);
   }
 
     recupererCollegueCourant(): Collegue {
