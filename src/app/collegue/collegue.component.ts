@@ -9,31 +9,31 @@ import { DataService } from '../services/data.service';
 export class CollegueComponent implements OnInit {
 
 
-
+  @Input() col: Collegue;
  
-  col: Collegue;
-
+ 
+  modeCreation = false;
   modeAffichage = true;
 
 
   constructor(private _serv:DataService) { 
+  }
+  ngOnInit():void{
     this.col = this._serv.recupererCollegueCourant();
   }
 
-
-  ngOnInit(): void {
-  }
-
-  modifierCollegue():void {
+  modifierCollegue() {
     this.modeAffichage = false;
-    console.log("Modification du collègue");
+    
   }
 
-  creerCollegue() :void {
-    console.log("Création de collègue");
+  creerCollegue()  {
+    console.log('Créer un nouveau collègue');
+    this.modeCreation = true;
+
   }
 
-  validerModif():void {
+  validerModif() {
     this.modeAffichage = true;
   }
 

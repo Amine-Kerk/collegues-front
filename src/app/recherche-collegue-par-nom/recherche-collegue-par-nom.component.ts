@@ -23,7 +23,7 @@ export class RechercheCollegueParNomComponent implements OnInit {
       this.rechercher = true;
       this.listeMatricules = this._serv.rechercherParNom(nom);
     } else {
-      this.rechercher = false;
+      this.listeMatricules = [];
     }
 
   }
