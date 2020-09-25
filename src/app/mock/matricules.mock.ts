@@ -1,8 +1,6 @@
-export const matricules:any[] = [
-    {matricule:"007"}, 
-    {matricule:"008"},
-    {matricule:"009"}, 
-    {matricule:"010"},
-    {matricule:"010"}];
-
- 
+export const matriculesMock:string[] =
+ ["01T440DE3", 
+  "04ADD4TD1",
+  "105OTG4FJ",
+  "93OD3PFV5",
+  "024PUID4F"];
