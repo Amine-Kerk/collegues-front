@@ -36,5 +36,11 @@ export class RechercheCollegueParNomComponent implements OnInit {
       },
         error => this.erreurTechnique = true);
   }
+  selectionnerCol(matricule: string):void {
+    this._serv.publierCol(matricule)
+    .subscribe(() => { },
+    error => this.erreurTechnique = true
+ );
+  }
 
 }

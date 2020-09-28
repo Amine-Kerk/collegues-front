@@ -1,11 +1,12 @@
 <div class="row">
   <div class="col-4">Recherche par nom : </div>
-  <input class="col-3 form-control" type="text" #saisieNom>
-  <button type="button" class="col-3 btn btn-info offset-1" (click)="rechercherCol(saisieNom.value)">Rechercher</button>
+  <input class="col-3 form-control" type="text" #nomSaisi>
+  <button type="button" class="col-3 btn btn-info offset-1" (click)="rechercherCol(nomSaisi.value)">Rechercher</button>
 </div>
 <div *ngIf="listeMatricules" class="row">
   <ul>
-    <li *ngFor="let mat of listeMatricules">{{mat}}</li>
+    <li *ngFor="let mat of listeMatricules">
+      <button class="btn btn-link" (click)="selectionnerCol(mat)">{{mat}}</button>
   </ul>
 </div>
 
