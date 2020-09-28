@@ -46,4 +46,13 @@ export class DataService {
     );
 
   }
+  creerCollegue(collegue:Collegue):Observable<Collegue> {
+    return this.http.post<Collegue>(`${environment.backendUrl}`, {
+      "nom":collegue.nom,
+      "prenoms":collegue.prenom,
+      "email":collegue.email,
+      "dateDeNaissance":collegue.dateDeNaissance,
+      "photoUrl":collegue.photoUrl });
+  }
+
 }
