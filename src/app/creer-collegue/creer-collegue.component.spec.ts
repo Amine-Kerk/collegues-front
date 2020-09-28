@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FormCreationComponent } from './form-creation.component';
+import { CreerCollegueComponent } from './creer-collegue.component';
 
-describe('FormCreationComponent', () => {
-  let component: FormCreationComponent;
-  let fixture: ComponentFixture<FormCreationComponent>;
+describe('CreerCollegueComponent', () => {
+  let component: CreerCollegueComponent;
+  let fixture: ComponentFixture<CreerCollegueComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FormCreationComponent ]
+      declarations: [ CreerCollegueComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormCreationComponent);
+    fixture = TestBed.createComponent(CreerCollegueComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
