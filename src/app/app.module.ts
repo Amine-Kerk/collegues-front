@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { CollegueComponent } from './collegue/collegue.component';
 import { RechercheCollegueParNomComponent } from './recherche-collegue-par-nom/recherche-collegue-par-nom.component';
-
+import { CreerCollegueComponent } from './creer-collegue/creer-collegue.component'; 
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
-import { CreerCollegueComponent } from './creer-collegue/creer-collegue.component';
+
 
 
 @NgModule({

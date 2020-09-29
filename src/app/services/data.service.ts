@@ -29,13 +29,13 @@ export class DataService {
 
 
   rechercherParNom(nom: string): Observable<string[]> {
-    return this.http.get<string[]>(`${environment.backendUrl}?nom=${nom}`);
+    return this.http.get<string[]>(`${environment.backendUrl}/collegues?nom=${nom}`);
   }
   recupererCollegueCourant(): Observable<Collegue> {
     return this.subCollegueSelectionne.asObservable();
   }
    selectionnerMatricule(matricule: string): Observable<Collegue>{
-    return this.http.get<CollegueBack>(`${environment.backendUrl}/${matricule}`)
+    return this.http.get<CollegueBack>(`${environment.backendUrl}/collegues/${matricule}`)
     .pipe(
       map(collegueBack => new Collegue(collegueBack.matricule, collegueBack.nom, collegueBack.prenom, collegueBack.email,
         new Date(collegueBack.dateDeNaissance), collegueBack.photoUrl)),
@@ -45,7 +45,7 @@ export class DataService {
   }
   creerCollegue(col: CreerCollegueForm): Observable<Collegue> {
     return this.http.post<CollegueBack>(
-      `${environment.backendUrl}`,
+      `${environment.backendUrl}/collegues`,
       col)
       .pipe(
         map(colBack => new Collegue(colBack.matricule, colBack.nom, colBack.prenom, colBack.email,
