@@ -7,6 +7,21 @@ import { CreerCollegueComponent } from './creer-collegue/creer-collegue.componen
 import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
+import {MenuComponent} from './menu/menu.component';
+import { PageAcceuilComponent } from './pages/page-acceuil/page-acceuil.component';
+import { PageGalerieComponent } from './pages/page-galerie/page-galerie.component';
+import { PageAproposComponent } from './pages/page-apropos/page-apropos.component';
+import { PageCreerCollegueComponent } from './pages/page-creer-collegue/page-creer-collegue.component'
+import { RouterModule, Routes } from '@angular/router';
+
+const routes : Routes = [
+{path :'acceuil',component:PageAcceuilComponent},
+{path :'galerie',component:PageGalerieComponent},
+{path :'apropos',component:PageAproposComponent},
+{path:'creer-collegue',component:PageCreerCollegueComponent},
+{path:'',pathMatch:'full',redirectTo:'/acceuil'}
+
+]
 
 
 
@@ -16,14 +31,21 @@ import { FormsModule } from '@angular/forms';
     CollegueComponent,
     RechercheCollegueParNomComponent,
     CreerCollegueComponent,
-   
-
+    MenuComponent,
+    PageAcceuilComponent,
+    PageGalerieComponent,
+    PageAproposComponent,
+    PageCreerCollegueComponent
   ],
+
   imports: [
     BrowserModule,
-    HttpClientModule,
-    FormsModule
+    HttpClientModule,  //module qui permet de faire des appels HHTP
+    FormsModule,
+    RouterModule.forRoot(routes) // config router 
+  
   ],
+  
   providers: [],
   bootstrap: [AppComponent]
 })

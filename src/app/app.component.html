@@ -1,21 +1,76 @@
-<div style="text-align:center">
-  <h1>
-    Systéme administration Collègue
+<!--en tete-->
+<header class ="titre bg-company-blue ">
+  <div style="text-align:center">
+    <h1>
+      SYSTEM ADMINISTARION COLLEGUE
+    </h1>
+  </div>
+</header>
 
-  </h1>
-</div>
+
+<!--Menu Navbar-->
+<app-menu></app-menu>
+
+
+<!--Contenu-->
 <div class="row"><br></div>
 <main class="container-fluid">
-  <div class="row">
-    <app-recherche-collegue-par-nom class="col-sm"></app-recherche-collegue-par-nom>
-    <app-collegue class="col-sm-7"></app-collegue>
-  </div>
-
-  <div class="row">
-    <div class="col-12">
-      <app-creer-collegue></app-creer-collegue>
-    </div>
-  </div>
-
-  
+  <router-outlet></router-outlet>
 </main>
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small teal pt-4 bg-company-yellow">
+
+  <!-- Footer Text -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Concernant l'application ? </h5>
+        <p>Cette application permet de créer,modifirer,rechercher et supprimer un collegue en base de donnée , elle permet aussi 
+          de stocker des données conecernant un collégue en base de donnée : Nom,Prénom,Date de naissance,Email et Photo .
+          l'appli est capable aussi de générer un matricule aléatoire à chaque nouveau collégue
+          rajouté en base de donnée et faire la liaison automatiquement , en ce moment l'application est toujours en cours 
+          d'amélioration des nouvelles fonctionalités sont en cours de préparation . 
+        </p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mb-md-0 mb-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Technologies ?</h5>
+        <p></p>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Text -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3 bg-company-blue">© 2020 Copyright:
+    <a href="https://github.com/Amine-Kerk" >Amine Kerkoub</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
