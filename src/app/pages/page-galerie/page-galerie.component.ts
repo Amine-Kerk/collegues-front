@@ -2,8 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import {  Subscription } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 
-import { DataService } from 'src/app/services/data.service';
-import { PhotoDTO } from 'src/app/models/PhotoDTO';
+import { PhotoDTO } from '../../models/photoDTO';
+import {DataService} from '../../services/data.service'
+
+
+
+
+
 
 
 
