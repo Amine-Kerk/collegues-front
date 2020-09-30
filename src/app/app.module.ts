@@ -15,12 +15,14 @@ import { PageCreerCollegueComponent } from './pages/page-creer-collegue/page-cre
 import { RouterModule, Routes } from '@angular/router';
 import { ModifierCollegueComponent } from './modifier-collegue/modifier-collegue.component';
 import { SupprimerCollegueComponent } from './supprimer-collegue/supprimer-collegue.component';
+import { CollegueGallerieComponent } from './collegue-gallerie/collegue-gallerie.component';
 
 
 
 const routes : Routes = [
 {path :'acceuil',component:PageAcceuilComponent},
 {path :'galerie',component:PageGalerieComponent},
+{path:'galerie/:matricule',component:CollegueGallerieComponent},
 {path :'apropos',component:PageAproposComponent},
 {path:'creer-collegue',component:PageCreerCollegueComponent},
 {path:'',pathMatch:'full',redirectTo:'/acceuil'}
@@ -42,6 +44,7 @@ const routes : Routes = [
     PageCreerCollegueComponent,
     ModifierCollegueComponent,
     SupprimerCollegueComponent,
+    CollegueGallerieComponent,
   
     
     
