@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { CreerCollegueForm } from './../creer-collegue/creer-collegue-form';
-
+import {PhotoDTO} from '../models/PhotoDTO';
 
 interface CollegueBack {
   id: number;
@@ -52,5 +52,8 @@ export class DataService {
           new Date(colBack.dateDeNaissance), colBack.photoUrl)));
   }
 
+  rechercherPhotos():Observable<PhotoDTO[]> {
+    return this.http.get<PhotoDTO[]>(`${environment.backendUrl}/collegues/photos`);
+  }
 
 } 
