@@ -1,13 +1,11 @@
 import { environment } from './../../environments/environment';
-import {collegueMock} from '../mock/collegues.mock'
-import  {matriculesMock} from '../mock/matricules.mock'
+
 import {Collegue} from '../models/Collegue';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, Subject } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { CreerCollegueForm } from './../creer-collegue/creer-collegue-form';
-
 import { PhotoDTO } from '../models/PhotoDTO';
 
 
