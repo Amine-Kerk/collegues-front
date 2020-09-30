@@ -6,14 +6,6 @@ import { PhotoDTO } from '../../models/photoDTO';
 import {DataService} from '../../services/data.service'
 
 
-
-
-
-
-
-
-
-
 @Component({
   selector: 'app-page-galerie',
   templateUrl: './page-galerie.component.html',

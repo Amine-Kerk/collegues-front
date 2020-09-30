@@ -17,6 +17,7 @@ import { ModifierCollegueComponent } from './modifier-collegue/modifier-collegue
 import { SupprimerCollegueComponent } from './supprimer-collegue/supprimer-collegue.component';
 
 
+
 const routes : Routes = [
 {path :'acceuil',component:PageAcceuilComponent},
 {path :'galerie',component:PageGalerieComponent},
@@ -41,6 +42,7 @@ const routes : Routes = [
     PageCreerCollegueComponent,
     ModifierCollegueComponent,
     SupprimerCollegueComponent,
+  
     
     
   ],
